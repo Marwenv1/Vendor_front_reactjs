@@ -18,7 +18,7 @@ function ProductsAPI() {
         `https://marketplace-tayara.herokuapp.com/api/products?limit=${
           page * 8
         }&${category}&${sort}&title[regex]=${search}`
-      );
+          ,{headers: {'Access-Control-Allow-Origin': '*'}});
       setProducts(res.data.products);
       setResult(res.data.result);
       setLoading(false);

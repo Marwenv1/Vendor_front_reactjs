@@ -27,7 +27,7 @@ function ShopDetail() {
       if (id) {
         setLoading(true);
         const res = await axios.get(
-          `https://marketplace-tayara.herokuapp.com/api/shops/${id}`
+          `https://marketplace-tayara.herokuapp.com/api/shops/${id}`,{headers: {'Access-Control-Allow-Origin': '*'}}
         );
         setProducts(res.data.products);
         setLoading(false);

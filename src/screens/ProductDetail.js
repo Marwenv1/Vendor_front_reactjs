@@ -112,6 +112,7 @@ function ProductDetail() {
         {
           headers: {
             Authorization: token,
+              "Access-Control-Allow-Origin": "*"
           },
         }
       );

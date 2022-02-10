@@ -110,6 +110,7 @@ function SellerProductDetails() {
         {
           headers: {
             Authorization: token,
+              'Access-Control-Allow-Origin': '*'
           },
         }
       );

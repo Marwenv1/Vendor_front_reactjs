@@ -97,7 +97,7 @@ function EditProduct() {
             images: image,
             category: category,
           },
-          { headers: { Authorization: token } }
+          { headers: { Authorization: token, "Access-Control-Allow-Origin": "*" } }
         );
         toast.info("Product Updated.");
       } else {
@@ -111,7 +111,7 @@ function EditProduct() {
             images: image,
             category: category,
           },
-          { headers: { Authorization: token } }
+          { headers: { Authorization: token, "Access-Control-Allow-Origin": "*" } }
         );
         toast.success("Product Created.");
       }
@@ -141,6 +141,7 @@ function EditProduct() {
           headers: {
             "content-type": "multipart/form-data",
             Authorization: token,
+              "Access-Control-Allow-Origin": "*"
           },
         }
       );
@@ -158,7 +159,7 @@ function EditProduct() {
         "https://marketplace-tayara.herokuapp.com/api/destroy",
         { public_id: image.public_id },
         {
-          headers: { Authorization: token },
+          headers: { Authorization: token, "Access-Control-Allow-Origin": "*" },
         }
       );
       setLoading(false);

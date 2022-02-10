@@ -237,7 +237,7 @@ function Order() {
       "https://marketplace-tayara.herokuapp.com/user/addcart",
       { cart: cart },
       {
-        headers: { Authorization: token },
+        headers: { Authorization: token ,"Access-Control-Allow-Origin": "*"},
       }
     );
   };
@@ -256,7 +256,7 @@ function Order() {
           trxid: data.trxid,
         },
         {
-          headers: { Authorization: token },
+          headers: { Authorization: token ,"Access-Control-Allow-Origin": "*" },
         }
       );
       toast.success("Order Completed");

@@ -50,7 +50,8 @@ function Cart() {
       "https://marketplace-tayara.herokuapp.com/user/addcart",
       { cart: cart },
       {
-        headers: { Authorization: token },
+        headers: { Authorization: token ,
+            "Access-Control-Allow-Origin": "*"},
       }
     );
   };

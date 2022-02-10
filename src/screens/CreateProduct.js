@@ -158,7 +158,8 @@ function CreateProduct() {
         "https://marketplace-tayara.herokuapp.com/api/destroy",
         { public_id: image.public_id },
         {
-          headers: { Authorization: token },
+          headers: { Authorization: token,
+              "Access-Control-Allow-Origin": "*"},
         }
       );
       setLoading(false);

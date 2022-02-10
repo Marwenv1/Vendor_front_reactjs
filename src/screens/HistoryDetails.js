@@ -113,7 +113,7 @@ function HistoryDetails() {
           checked: checked,
         },
         {
-          headers: { Authorization: token },
+          headers: { Authorization: token, "Access-Control-Allow-Origin": "*" },
         }
       );
       setCallback(!callback);

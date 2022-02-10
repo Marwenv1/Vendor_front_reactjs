@@ -56,7 +56,7 @@ function Login() {
       await axios.post("https://marketplace-tayara.herokuapp.com/user/login", {
         userName: userName,
         password: password,
-      });
+      },{headers: {'Access-Control-Allow-Origin': '*'}});
       toast.success("Wellcome.");
       window.location.href = "/";
     } catch (error) {

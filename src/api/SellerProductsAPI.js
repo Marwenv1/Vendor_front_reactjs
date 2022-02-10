@@ -12,6 +12,7 @@ function SellerProductsAPI(token) {
           "https://marketplace-tayara.herokuapp.com/api/seller_product",
           {
             headers: { Authorization: token },
+          'Access-Control-Allow-Origin': '*'
           }
         );
         setSellerProducts(res.data.sellerProducts);

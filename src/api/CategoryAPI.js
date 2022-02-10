@@ -6,7 +6,7 @@ function CategoryAPI() {
   const [callback, setCallback] = useState(false);
 
   const getCategory = async () => {
-    const res = await axios.get("https://marketplace-tayara.herokuapp.com/api/category");
+    const res = await axios.get("https://marketplace-tayara.herokuapp.com/api/category" ,{headers: {'Access-Control-Allow-Origin': '*'}});
     setCategory(res.data.categories);
   };
 

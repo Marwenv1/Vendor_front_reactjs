@@ -6,7 +6,7 @@ function ShopsAPI() {
   const [callback, setCallback] = useState(false);
 
   const getShops = async () => {
-    const res = await axios.get("https://marketplace-tayara.herokuapp.com/api/shops");
+    const res = await axios.get("https://marketplace-tayara.herokuapp.com/api/shops",{headers: {'Access-Control-Allow-Origin': '*'}});
     setShops(res.data.shops);
   };
 

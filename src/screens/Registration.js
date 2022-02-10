@@ -69,7 +69,7 @@ function Registration() {
         rePassword: rePassword,
         role: role,
         shopName: shopName,
-      });
+      },{headers: {'Access-Control-Allow-Origin': '*'}});
       window.location.href = "/";
       toast.success("Register Success.");
     } catch (error) {
