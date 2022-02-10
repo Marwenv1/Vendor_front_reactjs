@@ -102,7 +102,7 @@ function SellerProductDetails() {
     e.preventDefault();
     try {
       await axios.post(
-        `https://shop-clue.herokuapp.com/api/review/${id}`,
+        `https://marketplace-tayara.herokuapp.com/api/review/${id}`,
         {
           rating: ratingValue,
           comment: comment,

@@ -77,7 +77,7 @@ function Profile() {
       formData.append("file", file);
       setLoading(true);
       const res = await axios.post(
-        "https://shop-clue.herokuapp.com/api/upload",
+        "https://marketplace-tayara.herokuapp.com/api/upload",
         formData,
         {
           headers: {
@@ -97,7 +97,7 @@ function Profile() {
     try {
       setLoading(true);
       await axios.post(
-        "https://shop-clue.herokuapp.com/api/destroy",
+        "https://marketplace-tayara.herokuapp.com/api/destroy",
         { public_id: image.public_id },
         {
           headers: { Authorization: token },
@@ -114,7 +114,7 @@ function Profile() {
     e.preventDefault();
     try {
       await axios.put(
-        `https://shop-clue.herokuapp.com/user/user_info/${id}`,
+        `https://marketplace-tayara.herokuapp.com/user/user_info/${id}`,
         {
           fullName: fullName,
           password: password,

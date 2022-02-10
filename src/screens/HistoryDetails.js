@@ -108,7 +108,7 @@ function HistoryDetails() {
     e.preventDefault();
     try {
       await axios.put(
-        `https://shop-clue.herokuapp.com/api/order/${_id}`,
+        `https://marketplace-tayara.herokuapp.com/api/order/${_id}`,
         {
           checked: checked,
         },

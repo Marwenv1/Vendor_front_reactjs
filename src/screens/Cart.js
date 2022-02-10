@@ -47,7 +47,7 @@ function Cart() {
 
   const fetchCart = async (cart) => {
     await axios.patch(
-      "https://shop-clue.herokuapp.com/user/addcart",
+      "https://marketplace-tayara.herokuapp.com/user/addcart",
       { cart: cart },
       {
         headers: { Authorization: token },

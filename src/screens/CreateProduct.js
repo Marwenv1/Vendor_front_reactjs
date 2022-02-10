@@ -89,7 +89,7 @@ function CreateProduct() {
     try {
       if (onEdit) {
         await axios.put(
-          `https://shop-clue.herokuapp.com/api/product/${_id}`,
+          `https://marketplace-tayara.herokuapp.com/api/product/${_id}`,
           {
             title: title,
             price: price,
@@ -102,7 +102,7 @@ function CreateProduct() {
         toast.info("Product Updated.");
       } else {
         await axios.post(
-          "https://shop-clue.herokuapp.com/api/products",
+          "https://marketplace-tayara.herokuapp.com/api/products",
           {
             product_id: productId,
             title: title,
@@ -135,7 +135,7 @@ function CreateProduct() {
       formData.append("file", file);
       setLoading(true);
       const res = await axios.post(
-        "https://shop-clue.herokuapp.com/api/upload",
+        "https://marketplace-tayara.herokuapp.com/api/upload",
         formData,
         {
           headers: {
@@ -155,7 +155,7 @@ function CreateProduct() {
     try {
       setLoading(true);
       await axios.post(
-        "https://shop-clue.herokuapp.com/api/destroy",
+        "https://marketplace-tayara.herokuapp.com/api/destroy",
         { public_id: image.public_id },
         {
           headers: { Authorization: token },

@@ -130,7 +130,7 @@ const PaymentForm = () => {
             setValue(e.target.value);
           }}
         >
-          <FormControlLabel value="bkash" control={<Radio />} label="Bkash" />
+
           <FormControlLabel
             value="cod"
             control={<Radio color="primary" />}
@@ -234,7 +234,7 @@ function Order() {
 
   const fetchCart = async (cart) => {
     await axios.patch(
-      "https://shop-clue.herokuapp.com/user/addcart",
+      "https://marketplace-tayara.herokuapp.com/user/addcart",
       { cart: cart },
       {
         headers: { Authorization: token },
@@ -246,7 +246,7 @@ function Order() {
     try {
       setLoading(true);
       await axios.post(
-        "https://shop-clue.herokuapp.com/api/order",
+        "https://marketplace-tayara.herokuapp.com/api/order",
         {
           cart: cart,
           district: data.district,
