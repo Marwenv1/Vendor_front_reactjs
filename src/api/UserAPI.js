@@ -67,7 +67,9 @@ function UserAPI(token) {
           const res = await axios.get(
             "https://marketplace-tayara.herokuapp.com/api/order",
             {
-              headers: { Authorization: token },
+
+              headers: { Authorization: token ,
+                  "Access-Control-Allow-Origin": "*"},
             }
           );
           setHistory(res.data.sellerOrders);
